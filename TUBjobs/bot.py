@@ -44,11 +44,16 @@ class Bot:
         return info_p_jobs
 
     def tweet_tweet(self, info_jobs, job_type):
+        # Store the id of the previous tweet to tweet in a thread
+        prev_id = None
+
         # Tweet the new jobs
         for job in info_jobs:
+
             content = self.tweezer.prepare_job_content(job, job_type)
             try:
-                status = self.tweezer.tweet(content)
+                status = self.tweezer.tweet(content, prev_id)
+                prev_id = status.id
             except Exception as e:
                 print(e)
         

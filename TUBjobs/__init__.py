@@ -28,4 +28,3 @@ def main(mytimer: func.TimerRequest, inputblob: str,
     bot.tweet_tweet(info_ending_jobs, 'ending')
     
     bot.write_jobs(jobs, outputblob)
-    

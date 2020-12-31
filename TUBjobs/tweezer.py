@@ -38,7 +38,10 @@ class Tweezer():
         
         return content
 
-    def tweet(self, content):
-        status = self.api.update_status(content)
+    def tweet(self, content, prev_id):
+        if prev_id is None:
+            status = self.api.update_status(content)
+        else:
+            status = self.api.update_status(content, prev_id)
 
         return status

@@ -4,5 +4,11 @@
   "azureFunctions.pythonVenv": ".venv",
   "azureFunctions.projectLanguage": "Python",
   "azureFunctions.projectRuntime": "~3",
-  "debug.internalConsoleOptions": "neverOpen"
+"debug.internalConsoleOptions": "neverOpen",
+"python.testing.pytestArgs": [
+    "TUBjobs"
+],
+"python.testing.unittestEnabled": false,
+"python.testing.nosetestsEnabled": false,
+"python.testing.pytestEnabled": true
 }
